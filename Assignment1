@@ -41,3 +41,17 @@ _sub_string= "man"
 _string_count=_string.count(_sub_string,None,None)
 print("The count of substring in string is :",_string_count,"and substring is :" , _sub_string)
 
+#Que 6 : Write a code to perform basic string compression using the count of repeated characters.
+#aabbbccccddd -> a2b3c4d3
+_string = "aaadddeegggff"
+count = 1
+for i in range(1,len(_string)):
+  if (_string[i]==_string[i-1]):
+    count= count+1
+    
+  else:
+    print(_string[i-1],":", count,",",end =" ")
+    count = 1
+
+print(count,_string[-1])
+

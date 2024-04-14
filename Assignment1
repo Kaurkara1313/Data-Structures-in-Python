@@ -36,7 +36,8 @@ else:
 
 
 #Que 5 : Write a code to find all occurrences of ' given substring within another string.
-_string = input("Enter string: ")
-_sub_string= input("Enter substring: ")
+_string = "manmanman"
+_sub_string= "man"
 _string_count=_string.count(_sub_string,None,None)
 print("The count of substring in string is :",_string_count,"and substring is :" , _sub_string)
+

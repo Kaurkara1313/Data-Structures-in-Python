@@ -83,3 +83,9 @@ _string_upper = input("Enter string: ")
 _string_upper = _string_upper.upper()
 print("The string in upper case: ",_string_upper)
 
+# Que 9: Write a code to count the number of words in string
+
+_string= "Hi My name is karandeep"
+_string_count = len(_string.split())
+print("The count of number of words in string: ",_string_count)
+

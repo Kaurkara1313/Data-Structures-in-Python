@@ -73,5 +73,13 @@ if itr == 1:
 else:
   print("The string contains unique characters: ",_string)
 
+#Que 8 :Write a code to convert given string to upper or lower case.
 
+_string_lower = input("Enter string: ")
+_string_lower = _string_lower.lower()
+print("The string in lower case: ",_string_lower)
+
+_string_upper = input("Enter string: ")
+_string_upper = _string_upper.upper()
+print("The string in upper case: ",_string_upper)
 

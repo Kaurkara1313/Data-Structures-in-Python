@@ -89,3 +89,8 @@ _string= "Hi My name is karandeep"
 _string_count = len(_string.split())
 print("The count of number of words in string: ",_string_count)
 
+# Que 10 : Write a code to concatenate two strings without using the + operators.
+_string1 = "My name is Karandeep."
+_string2 = "I am an Engineer."
+
+print("The concatenated string is: ","%s%s" % (_string1,_string2))

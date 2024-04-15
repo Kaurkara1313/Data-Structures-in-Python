@@ -53,5 +53,5 @@ for i in range(1,len(_string)):
     print(_string[i-1],":", count,",",end =" ")
     count = 1
 
-print(count,_string[-1])
+print(_string[-1],":",count)
 

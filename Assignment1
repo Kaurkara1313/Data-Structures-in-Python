@@ -103,3 +103,10 @@ while _element in _list:
   _list.remove(_element)
 
 print(_list)
+
+# Que 12: Implement a code to find the second largest number in given list of integer
+
+_list = [23,95,45,67,12,89,95,90]
+_list = sorted(_list)
+_lar_list = list(set(_list))
+print("The second largest number in given list of integer: ",_lar_list[-2])

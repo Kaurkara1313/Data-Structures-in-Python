@@ -110,3 +110,15 @@ _list = [23,95,45,67,12,89,95,90]
 _list = sorted(_list)
 _lar_list = list(set(_list))
 print("The second largest number in given list of integer: ",_lar_list[-2])
+
+#Que 13 : create a code to count the occurrences of each element in a list and return a dictionary with elements as keys and their count as value
+
+_list =[23,23,14,67,89,34,12,56,34]
+_dict = {}
+for i in _list:
+  if i in _dict:
+    _dict[i]+=1
+  else:
+    _dict[i]=1
+
+print("The count of occurrences of each element: ",_dict)

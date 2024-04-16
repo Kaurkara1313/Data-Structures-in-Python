@@ -122,3 +122,10 @@ for i in _list:
     _dict[i]=1
 
 print("The count of occurrences of each element: ",_dict)
+
+#Que 14 : Write a code to reverse a list in place without using any built in reverse functions.
+
+_list = ['abc',23,'xyz','ybf',34]
+_reverse_list = _list[::-1]
+
+print("The reverse list: ",_reverse_list)

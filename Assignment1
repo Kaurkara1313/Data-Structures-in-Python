@@ -94,3 +94,12 @@ _string1 = "My name is Karandeep."
 _string2 = "I am an Engineer."
 
 print("The concatenated string is: ","%s%s" % (_string1,_string2))
+
+# Que 11: Write a code to remove all occurrences of specific element from a list
+_list = ['ABC','123','XYZ','ABC']
+_element = 'ABC'
+
+while _element in _list:
+  _list.remove(_element)
+
+print(_list)

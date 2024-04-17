@@ -172,3 +172,11 @@ for i in _list1:
     _list3.append(i)
 
 print(_list3)
+
+#Que 19:Create a code to find the union of two lists without duplicates
+_list1 = [23,56,67,56,89,90,65,91]
+_list2 = [34,56,67,23,90,56,89]
+
+_list_union = _list1+_list2
+_list_union_unq = sorted(list(set(_list_union)))
+print(_list_union_unq)

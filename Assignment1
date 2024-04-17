@@ -180,3 +180,10 @@ _list2 = [34,56,67,23,90,56,89]
 _list_union = _list1+_list2
 _list_union_unq = sorted(list(set(_list_union)))
 print(_list_union_unq)
+
+#Que 20: Write a code to shuffle a given list randomly without using any built-in shuffle function.
+import random
+
+_list = ['123',45,'Abc',76,'xyz']
+_shuffle_list = random.sample(_list,len(_list))
+print(_shuffle_list)

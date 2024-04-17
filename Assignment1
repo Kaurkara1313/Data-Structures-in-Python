@@ -161,3 +161,14 @@ _list2 = [67,68,79,91,98]
 
 _list_final = sorted(_list1+_list2)
 print (_list_final)
+
+#Que 18: Implement a code to find the intersection of two given lists
+
+_list1 = [23,45,65,78,98]
+_list2 = [45,56,67,65,78,98]
+_list3 =[]
+for i in _list1:
+  if i in _list2:
+    _list3.append(i)
+
+print(_list3)

@@ -198,3 +198,12 @@ _common = tuple(_tuple1_set & _tuple2_set)
 
 print("The common element: ",_common)
 
+#Que 22: Create a code that prompts the user to enter two sets of integers seperated by commas.Then print the intersection of these two sets.
+_set1 =input("Enter set1: ") #23,24,56,34,57
+_set2 =input("Enter set2 ") #5,67,87,34,65,57
+_set1=set(_set1.split(","))
+_set2=set(_set2.split(","))
+
+_set3 = _set1.intersection(_set2)
+
+print("The intersection of these two sets: ",set(_set3))

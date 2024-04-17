@@ -187,3 +187,14 @@ import random
 _list = ['123',45,'Abc',76,'xyz']
 _shuffle_list = random.sample(_list,len(_list))
 print(_shuffle_list)
+
+#Que 21: Write a code that takes two tuples as input and return a new tuple containing elements that are common to both input tuples.
+_tuple1 = (12,45,67,'abc',78,23)
+_tuple2 = (34,56,78,45,67,23,'abc')
+_tuple1_set = set(_tuple1)
+_tuple2_set = set(_tuple2)
+
+_common = tuple(_tuple1_set & _tuple2_set)
+
+print("The common element: ",_common)
+

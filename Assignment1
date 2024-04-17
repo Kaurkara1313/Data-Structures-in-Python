@@ -154,3 +154,10 @@ elif _dsc_list == _list:
 else:
   print("The list is not in order:",_list)
 
+#Que 17: Write a code to merge two sorted list into a single sorted list
+
+_list1 = [23,34,56,73,78]
+_list2 = [67,68,79,91,98]
+
+_list_final = sorted(_list1+_list2)
+print (_list_final)

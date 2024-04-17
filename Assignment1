@@ -129,3 +129,28 @@ _list = ['abc',23,'xyz','ybf',34]
 _reverse_list = _list[::-1]
 
 print("The reverse list: ",_reverse_list)
+
+#Que 15: Implement a code to find and remove duplicate from  a list while preserving the original order of element
+
+_list = [23,5,67,23,67,45,34,24]
+_remove_dup = []
+for i in _list:
+  if i not in _remove_dup:
+    _remove_dup.append(i)
+print("The list after removing duplicates: ",_remove_dup)
+
+#Que 16:Create a code to check if given list is sorted (either in ascending or descending order) or not
+
+_list = [67,56,34,21]
+_asc_list = sorted(_list)
+_dsc_list = sorted(_list,reverse = True)
+
+if _asc_list == _list:
+  print("The list is in ascending order:",_list)
+
+elif _dsc_list == _list:
+  print("The list is in descending order:",_list)
+
+else:
+  print("The list is not in order:",_list)
+

@@ -207,3 +207,13 @@ _set2=set(_set2.split(","))
 _set3 = _set1.intersection(_set2)
 
 print("The intersection of these two sets: ",set(_set3))
+
+#Que 23: Write a code to concatenate two tuples. The function should take two tuples as input and return a new tuple containing elements from both input tuples.
+def my_function(_tuple1,_tuple2):
+
+  _tuple_con = "("+_tuple1+"," + _tuple2 + ")"
+  print(_tuple_con)
+
+
+my_function(_tuple1 = input("Enter tuple list 1 : ") #(23,45,67,89)
+,_tuple2 = input("Enter tuple list 2 : ")) # (34,56,87,98)

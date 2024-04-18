@@ -217,3 +217,11 @@ def my_function(_tuple1,_tuple2):
 
 my_function(_tuple1 = input("Enter tuple list 1 : ") #(23,45,67,89)
 ,_tuple2 = input("Enter tuple list 2 : ")) # (34,56,87,98)
+
+# Que 24: Develop a code that prompts the user to input two sets of strings. Then  print the elements that are present in the first set but not in the second set.
+_set_str1 = input("Enter string1: ")
+_set_str2 = input("Enter string2: ")
+_set_str1 = set(_set_str1)
+_set_str2 = set(_set_str2)
+_set3 = _set_str1-_set_str2
+print(_set3)

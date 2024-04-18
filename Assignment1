@@ -279,3 +279,16 @@ _set2 = set(_set2)
 
 _set_union = _set1.union(_set2)
 print(_set_union)
+
+#Que 27 :Develop a code that takes tuple of integers as input. The function should return the maximum and minimum values from the tuple using tuple unpacking.
+def _my_function (_tuple1):
+  tuple_min = str(min(_tuple1))
+  tuple_max = str(max(_tuple1))
+  tuple_con = tuple_min +"," + tuple_max
+  tuple_sep = tuple_con.split(",")
+  tuple_min,tuple_max = tuple_sep
+  print("The minimum value is: ",tuple_sep[0]+"\n"+"The maximum value is: ",tuple_sep[1]+"\n"+"The tuple is: ",tuple(tuple_sep))
+
+_my_function(
+   _tuple1= tuple(input("Enter input:").split(","))    #45,78,90,34,95         
+)

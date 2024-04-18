@@ -225,3 +225,47 @@ _set_str1 = set(_set_str1)
 _set_str2 = set(_set_str2)
 _set3 = _set_str1-_set_str2
 print(_set3)
+
+# Que 25 : Create a code that takes a tuple and two integers as input. The function should return a new tuple containing elements from the original tuple within the specified range of indices.
+#def _my_function(_tuple1,_int_range1,_int_range2):
+def _my_function():
+
+  _tuple1 = (23,56,69,78,67)
+  _int_range1 = 1
+  _int_range2 = 5
+  if (_tuple1[_int_range1:_int_range2]) == ():
+    tuple3 = _tuple1[_int_range2:_int_range1]
+
+  else:
+    tuple3 =  _tuple1[_int_range1:_int_range2]
+  return  tuple3
+
+_my_function(
+    #_tuple1= tuple(input("Enter Tuple: ").split(",")),
+    #_int_range1=int(input("Enter Int value 1: ")),
+    #_int_range2=int(input("Enter Int value 2: "))
+    
+)
+
+#OR
+
+def _my_function(_tuple1,_int_range1,_int_range2):
+#def _my_function():
+
+  #_tuple1 = (23,56,69,78,67)
+  #_int_range1 = 1
+  #_int_range2 = 5
+  if (_tuple1[_int_range1:_int_range2]) == ():
+    tuple3 = _tuple1[_int_range2:_int_range1]
+
+  else:
+    tuple3 =  _tuple1[_int_range1:_int_range2]
+  return  tuple3
+
+_my_function(
+    _tuple1= tuple(input("Enter Tuple: ").split(",")),
+    _int_range1=int(input("Enter Int value 1: ")),
+    _int_range2=int(input("Enter Int value 2: "))
+    
+)
+

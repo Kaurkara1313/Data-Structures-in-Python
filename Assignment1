@@ -269,3 +269,13 @@ _my_function(
     
 )
 
+# Que 26: Write a code that prompts the user to input two sets of characters. Then print the union of these  two sets.
+_set1 = input("Enter input1: ")
+_set2 = input("Enter input1: ")
+_set1 = _set1.split(",")
+_set2 = _set2.split(",")
+_set1 =set(_set1)
+_set2 = set(_set2)
+
+_set_union = _set1.union(_set2)
+print(_set_union)

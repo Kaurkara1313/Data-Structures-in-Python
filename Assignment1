@@ -309,3 +309,18 @@ _intersection = str(_intersection)
 _difference = str(_difference)
 print("The union of sets:",_union +"\n"+"The intersection of sets: ",_intersection +"\n"+"The difference of sets: ", _difference)
 
+# Que 29: Write a code  that takes tuple and an element as input. The function should return the count of occurrences of the given element in the tuple.
+def _my_function(_tuple,_element,_count):
+  
+  for i in _tuple:
+    if _element == i :
+      _count = _count+1
+
+  print("The given element is :", str(_element) + " and the count of give element is:",str(_count))
+
+_my_function(
+  _tuple = tuple(input("Enter Tuple: ").split(",")),
+  _element = input("Enter element: "),
+  _count = 0
+             
+)

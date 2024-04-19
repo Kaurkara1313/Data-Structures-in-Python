@@ -292,3 +292,20 @@ def _my_function (_tuple1):
 _my_function(
    _tuple1= tuple(input("Enter input:").split(","))    #45,78,90,34,95         
 )
+
+
+# Que:28 Create a code that defines two sets of integers. Then print the union, intersection and difference of these two sets.
+
+_set1 = input("Enter input 1: ").split(",")
+_set2 = input("Enter input 2: ").split(",")
+_set1 = set(_set1)
+_set2 = set(_set2)
+
+_union = _set1.union(_set2)
+_intersection = _set1.intersection(_set2)
+_difference = _set1.difference(_set2)
+_union = str(_union)
+_intersection = str(_intersection)
+_difference = str(_difference)
+print("The union of sets:",_union +"\n"+"The intersection of sets: ",_intersection +"\n"+"The difference of sets: ", _difference)
+

@@ -324,3 +324,73 @@ _my_function(
   _count = 0
              
 )
+
+#Que 30: Develop a code that prompts the user to input two sets of strings. Then print the symmetric difference of these two sets.
+set1 = set(input("Enter set 1:").split(",")) # banana,apple,cherry,kiwi
+set2 = set(input("Enter set 2:").split(",")) # blueberry,grapes,mango,musk melon,cherry
+
+set3 = set1 ^ set2
+print("The first set:",str(set1)+"\n"+"The second set:",str(set2)+"\n"+"The symmetric difference of these two sets:",str(set3))
+
+#Que 31:Write a code that takes a list of words as input and returns a dictionary where the keys are unique words and the values are the frequencies of those words in the input list
+_input1 = list(input("Enter input: ").split(",")) #On,e,Food,e,Need,a,Air,Food,On,On,Happy,Because,Food,e,a,e
+_dict = {}
+for i in _input1:
+  if i in _dict:
+    _dict[i]+=1
+  else:
+    _dict[i]=1
+
+print("The count of occurrences of each element: ",_dict)
+
+#Que 32:  Write a code that takes two dictionaries as input and merges them into a single dictionary. If there are common keys, the values should be added together.
+_dict1 = {'apple': 50, 'grapes': 30,'banana': 25, 'kiwi': 20}
+_dict2 = {'apple': 100, 'kiwi': 20, 'musk melon': 20}
+
+for i in _dict1:
+  if i in _dict2:
+    _dict2[i] = _dict2[i] + _dict1[i]
+
+_dict = _dict1 | _dict2
+
+print("The keys and value of dictionary is: ",_dict)
+
+# Que 33: Write a code to access a value in a nested dictionary. The function should take the dictionary and a list of keys as input and return the corresponding value. If any of the keys do not exist in the dictionary, the function should return None
+
+def _my_func (_dict,_keys):
+  val = _dict
+  for i in _keys:
+    if i in val:
+      val = val[i]
+    else:
+      val = None
+  print("The key: ",str(i)+"\n"+"The val:",str(val))
+
+_my_func(
+    _dict = {'Gfg': {'is': 'best','or': {'and':'no'}},'Apple': {'diff_color':{'color1':'green','color2':'golden','color3':'red'}}},
+    _keys = ['Gfg','or']
+
+)
+
+# Que 34: Write a code that takes a dictionary as input and returns a sorted version of it based on the values. You can choose whether to sort in ascending or descending order.
+
+dict1 = {"a":67, "b": 54, "c": 87, "d": 56, "e":73} 
+sorted_dict = {} 
+sorted_keys = sorted(dict1, key=dict1.get) 
+for i in sorted_keys:     
+  sorted_dict[i] = dict1[i] 
+print(sorted_dict)
+
+# Que 35: Write a code that inverts a dictionary swapping keys and values. Ensure that the inverted dictionary correctly handles cases where multiple keys have the same value by storing the keys as a list in the inverted dictionary.
+_dict = {'A': 67, 'B': 23, 'C': 45, 'E': 12, 'F': 69, 'G': 67, 'H': 23}
+new_dict = {}
+for key, value in _dict.items():
+   if value in new_dict:
+       new_dict[value].append(key)
+   else:
+       new_dict[value]=[key]
+ 
+print ("Dictionary after swapping is :  ") 
+print("keys: values")
+for i in new_dict:
+    print(i, " :", new_dict[i])

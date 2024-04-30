@@ -1,1 +1,30 @@
+# Que 1: Explain the importance of functions.
+Functions are blocks of reusable and organised code that usually perform a single, related action. 
+They are a crucial part of programming because they save you a lot of time and make the code cleaner.
+It eliminates redudancy and make larger code more efficient and easier to maintain.
+
+# Que 2: Write a basic function to greet a student.
+def _my_func_greet():
+  print("Hello , Welcome to PW Skills Assignment 2" + "\n"+"Nice to meet you")
+
+_my_func_greet()
+
+# Que 3: What is the difference between return and print statement.
+Return : 
+(1) It is used to exit a function and return a value.
+(2) It returns a value that can be assigned to a variable or used in any expression.
+(3) It can be used multiple times in a function but only one value can be returned at a time.
+(4) Exiting the function with return ends the function and control returns to calling code.
+
+Print:
+(1) It is used to display output to the console.
+(2) It displays output to the console but does not return the value.
+(3) It can be used multiple times in a function but does not affect the function’s return value.
+(4) The print does not affect program flow and execution continues normally.
+
+
+
+
+
+
 

@@ -35,9 +35,14 @@ It has methods __iter__() and __next__().
 __iter__(): Called to initialize the iterator. It must return an iterator object.
 __next__(): Called to iterate over the iterator. It must return the next value in the data stream.
 
+# Que 6 : Write a code to generate square root of number from 1 to n using generator.
+def square_num (num):
+  for i in range (1,num+1):
+   yield i ** 2
+    
+num = int(input("Enter Number: "))
+Gen_Sq = square_num(num)
+for i,square_root in enumerate(Gen_Sq):
+  print(square_root)
 
-
-
-
-
-
+# Que 7 : Write a code to that generated palindromic numbers upto n using a generator.

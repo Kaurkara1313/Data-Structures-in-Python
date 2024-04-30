@@ -22,6 +22,19 @@ Print:
 (3) It can be used multiple times in a function but does not affect the function’s return value.
 (4) The print does not affect program flow and execution continues normally.
 
+# Que 4: What are *args and **kwargs?
+*args is known as variable length argument which means that it allows a function to accept any number of positional arguments i.e. arguments that are non-keyword arguments.
+If we are not sure about the numbers of paramets t pass through a function then we can use *args.
+
+**kwargs allows us to pass a variable number of keyworded arguments to the function.
+*args has limitation to not accept data as dictionary , in that case **kwargs can be used to pass keywords and associated data values of keywords through a function.
+
+# Que 5: What is iterator ?
+An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
+It has methods __iter__() and __next__().
+__iter__(): Called to initialize the iterator. It must return an iterator object.
+__next__(): Called to iterate over the iterator. It must return the next value in the data stream.
+
 
 
 

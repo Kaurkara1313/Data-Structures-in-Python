@@ -46,3 +46,28 @@ for i,square_root in enumerate(Gen_Sq):
   print(square_root)
 
 # Que 7 : Write a code to that generated palindromic numbers upto n using a generator.
+
+
+# Que 8 : Write a code that generates even numbers from 2 to n using a generator.
+
+def even_num (num):
+  for i in range (2,num+1):
+    if i%2 == 0:
+      yield i
+    
+num = int(input("Enter Number: "))
+Gen_even = even_num(num)
+for i,even_number in enumerate(Gen_even):
+  print(even_number)
+
+#Que 9 : Write a code that generates powers of two up to n using a generator.
+
+def display_powers_of_2(exp):
+    for i in range(exp+1):
+        yield 2**i
+        
+
+exp = int(input("Enter the number of powers of 2 to display: "))
+gen_pow = display_powers_of_2(exp)
+for i,power in enumerate(gen_pow):
+  print(power)

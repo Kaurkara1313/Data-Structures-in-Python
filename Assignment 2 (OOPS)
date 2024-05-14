@@ -125,3 +125,13 @@ _str2 = input("Enter string 2: ")
 _concate_str = lambda _str1,_str2: _str1 + _str2
 _concate_str_result = _concate_str(_str1,_str2)
 print("The concatenated string is:",_concate_str_result)
+
+# Que 15: Write a lamba function to find maximum of three given numbers.
+
+_num1 = int(input("Enter num 1: "))
+_num2 = int(input("Enter num 2: "))
+_num3 = int(input("Enter num 3: "))
+
+_Max_Num = lambda _num1,_num2,_num3: max(_num1,_num2,_num3)
+_result_max_num = _Max_Num(_num1,_num2,_num3)
+print("The maximum number is:",_result_max_num)

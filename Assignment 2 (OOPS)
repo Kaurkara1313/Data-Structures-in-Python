@@ -65,6 +65,26 @@ for i,even_number in enumerate(Gen_even):
 def display_powers_of_2(exp):
     for i in range(exp+1):
         yield 2**i
+
+# Que 10 : Write a code that generates prime numbers upto n using a generator.
+
+def prime_number(num):
+    for i in range(2,num):
+      if num%i == 0 :
+        return False
+    return True
+        
+def _prime (num1):
+  for i in range(2,num1):
+    if prime_number(i):
+      yield i
+
+num1 = int(input("Enter the limit to check whether number is prime: "))
+
+gen_prime = _prime(num1)
+for i,prime_print in enumerate(gen_prime):
+  print(prime_print)
+
         
 
 exp = int(input("Enter the number of powers of 2 to display: "))

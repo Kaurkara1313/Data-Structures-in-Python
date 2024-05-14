@@ -101,3 +101,11 @@ y = int(input("Enter num2: "))
 _SUM =  lambda x,y: x+y
 _result = _SUM(x,y)
 print("The sum of the two numbers is:",_result)
+
+# Que 12: Write a lamba function to calculate square of given number.
+
+num = int(input("Enter num: "))
+
+_Square = lambda num: num*num
+_square_result = _Square(num)
+print("The square of a given number is:",_square_result)

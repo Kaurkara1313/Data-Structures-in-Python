@@ -135,3 +135,17 @@ _num3 = int(input("Enter num 3: "))
 _Max_Num = lambda _num1,_num2,_num3: max(_num1,_num2,_num3)
 _result_max_num = _Max_Num(_num1,_num2,_num3)
 print("The maximum number is:",_result_max_num)
+
+# Que 16: Write a code that generates the squares of even numbers from a given list.
+
+_list_even =[]
+
+def _check_of_even_num(_list):
+  for i in _list:
+    if i%2 == 0:
+      _list_even.append(i)
+  print(list(map(lambda x:x**2,_list_even)))
+    
+_check_of_even_num(
+   _list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+)

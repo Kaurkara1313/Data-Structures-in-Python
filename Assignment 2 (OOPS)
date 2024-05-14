@@ -164,3 +164,17 @@ def _check_of_pos_num(_list):
 _check_of_pos_num(
    _list = [-1,2,3,2,4,-7]
 )
+
+# Que 18: Write a code that doubles the values of odd numbers from a given list.
+_list_odd =[]
+
+def _check_of_odd_num(_list):
+  for i in _list:
+    if i%2 != 0:
+      _list_odd.append(i)
+  print("The double of odd numbers in given list:",list(map(lambda x:x*2,_list_odd)))
+
+    
+_check_of_odd_num(
+   _list = [2,3,4,5,6,7,8,9,11]
+)

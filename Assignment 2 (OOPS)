@@ -382,7 +382,7 @@ gs = GermanShepherd()
 gs.make_sound()
 gs.move()
 
-# Que 34: Define constructors in both Animal and Dog classes with different initialization parameters.
+# Que 35: Define constructors in both Animal and Dog classes with different initialization parameters.
 
 class Animal:
   def __init__(self,_type,weight,gender):
@@ -402,3 +402,85 @@ animal1 = Animal('mammal','12','male')
 animal2 = Animal('wild','20','male')
 Dog1 = Dog('Bruno','beagle','brown')
 Dog2 = Dog('Spiky','germanshperd','black')
+
+# Que 36: What is abstraction in python? How is it implemented?
+Data abstraction is one of the most essential concepts of Python OOPs which is used to hide irrelevant details from the user and show the details that are relevant to the users.It enables programmers to hide complex implementation details while just showing users the most crucial data and functions. This abstraction makes it easier to design modular and well-organized code, makes it simpler to understand and maintain, promotes code reuse, and improves developer collaboration.
+
+from abc import ABC, abstractmethod 
+  
+# Create Abstract base class 
+class Car(ABC): 
+  def __init__(self, brand, model, year): 
+    self.brand = brand 
+    self.model = model 
+    self.year = year 
+      
+  # Create abstract method       
+  @abstractmethod
+  def printDetails(self): 
+    pass
+    
+  # Create concrete method 
+  def accelerate(self): 
+    print("speed up !") 
+    
+  def break_applied(self): 
+    print("Car stop") 
+      
+# Create a child class 
+class Hatchback(Car): 
+    
+  def printDetails(self): 
+    print("Brand:", self.brand); 
+    print("Model:", self.model); 
+    print("Year:", self.year); 
+    
+  def Sunroof(self): 
+    print("Not having this feature") 
+      
+# Create a child class 
+class Suv(Car): 
+    
+  def printDetails(self): 
+    print("Brand:", self.brand); 
+    print("Model:", self.model); 
+    print("Year:", self.year); 
+    
+  def Sunroof(self): 
+    print("Available") 
+  
+      
+car1 = Hatchback("Maruti", "Alto", "2022"); 
+  
+car1.printDetails() 
+car1.accelerate() 
+
+# Que 37: Explain the importance of abstraction in object oriented programming.
+
+(1) Abstraction: Abstract classes and methods provide a way to define a blueprint or template for a class without providing a complete implementation. This allows you to create a high-level abstract representation of an object or concept in your code.
+
+(2) Enforce Structure: Abstract classes enforce a certain structure or contract that concrete subclasses must adhere to. This can help ensure that subclasses implement specific methods and attributes, making the code more reliable and maintainable.
+
+(3) Polymorphism: Abstract classes and methods enable polymorphism, which is a core principle of object-oriented programming. Polymorphism allows you to write code that can work with objects of different classes as long as they implement the same abstract methods. This promotes code reuse and flexibility.
+
+(4) Forcing Implementation: Abstract methods are declared in the abstract class without any implementation. Subclasses are required to provide concrete implementations for these methods. This ensures that specific behavior is implemented in each subclass.
+
+(5) Code Organization: Abstract classes can help organize your code by grouping related classes and methods together under a common abstraction. This can improve code readability and maintainability by providing a clear structure.
+
+(6) Extensibility: Abstract classes can be extended by creating new subclasses that inherit the abstract methods. This allows you to add new functionality or features to your application by creating new subclasses without modifying existing code.
+
+(7) Testing: Abstract classes can be useful for testing and mocking in unit testing scenarios. You can create mock subclasses to test the behavior of classes that depend on the abstract class without relying on actual implementations.
+
+# Que 38: How abstract method are different from regular method?
+
+Abstract Methods:
+- An abstract method is a method declared in an abstract class that does not have an implementation in the abstract class.
+- Subclasses deriving from an abstract class must provide concrete implementations for all the abstract methods defined in the abstract class.
+- Abstract methods are defined using the abstract keyword and end with a semicolon instead of a method body.
+- Abstract methods serve as placeholders that must be implemented by concrete subclasses.
+
+Regular Method:
+Regular (instance) methods need a class instance and can access the instance through self . 
+They can read and modify an objects state freely. Class methods, marked with the @classmethod decorator, don't need a class instance. They can't access the instance (self) but they have access to the class itself
+
+# Que 39: 

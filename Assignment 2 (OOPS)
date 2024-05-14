@@ -249,3 +249,67 @@ _Max_Num = lambda _num1,_num2,_num3: max(_num1,_num2,_num3)
 _result_max_num = _Max_Num(_num1,_num2,_num3)
 print("The maximum number is:",_result_max_num)
 
+# Que 26: What is encapsulation in oops?
+
+Encapsulation is one of the fundamental concepts in object-oriented programming (OOP).
+It describes the idea of wrapping data and the methods that work on data within one unit.
+This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data.
+To prevent accidental change, an object’s variable can only be changed by an object’s method.
+Those types of variables are known as private variables.
+
+# Que 27: Explain the use of access modifiers in python classes.
+
+Access modifiers are defined as an important part of the visibility and accessibility of data members in the field of object-oriented programming.
+Access modifiers help to define how classes, methods, and variables can be accessed and modified by using access modifiers.
+Python used the ‘_’ symbol to define the accessibility and control of data members of the class.
+Access modifiers play a crucial role in maintaining data security and preventing unauthorized modifications.
+
+Types:
+Public Access Modifier: The members defined in the public class can be accessed from anywhere. 
+Protected Access Modifier: The members defined in the protected class can only be accessed from within the class in which they are declared and by its subclasses. 
+Private Access Modifier: The members defined in the private class can only be accessed by class members.
+
+# Que 28: What is inheritance in oops?
+
+Inheritance is one of the core features of object-oriented programming. 
+It’s a programming procedure that allows you to reuse code by referencing the behaviors and data of an object. 
+In other words, a class that inherits from another class shares all the attributes and methods of the referenced class.
+
+Types:
+
+(1) Single Inheritance:
+one class inherits from only one parent class. 
+This is also called simple inheritance because it’s the simplest type of inheritance you can use.
+
+(2) Hierarchical Inheritance
+The inheritance in which a single base class inherits multiple derived classes is known as the Hierarchical Inheritance. 
+This inheritance has a tree-like structure since every class acts as a base class for one or more child classes. 
+The visibility mode for each derived class is specified separately during the inheritance and it accesses the data members accordingly.
+An inherited class is called a subclass or child class of the class it inherits from. 
+And the class being inherited is called either a parent class, superclass, or base class.
+
+(3) Multilevel Inheritance
+The inheritance in which a class can be derived from another derived class is known as Multilevel Inheritance.
+Suppose there are three classes A, B, and C. A is the base class that derives from class B. 
+So, B is the derived class of A. Now, C is the class that is derived from class B.
+This makes class B, the base class for class C but is the derived class of class A. 
+This scenario is known as the Multilevel Inheritance. 
+The data members of each respective base class are accessed by their respective derived classes according to the specified visibility modes.
+
+(4) Multiple Inheritance
+The inheritance in which a class can inherit or derive the characteristics of multiple classes, or a derived class can have over one base class, is known as Multiple Inheritance. 
+It specifies access specifiers separately for all the base classes at the time of inheritance. 
+The derived class can derive the joint features of all these classes and the data members of all the base classes are accessed by the derived or child class according to the access specifiers. 
+
+# Que 29: Define polymorphism in oops?
+
+Polymorphism is the ability of any data to be processed in more than one form.
+The word itself indicates the meaning as poly means many and morphism means types. 
+Polymorphism is one of the most important concepts of object-oriented programming languages. 
+The most common use of polymorphism in object-oriented programming occurs when a parent class reference is used to refer to a child class object.
+
+# Que 30: Explain method overriding in python?
+
+Method overriding is an ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. 
+When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.
+(child class is always poerful than parent class)

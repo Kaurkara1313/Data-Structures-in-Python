@@ -91,3 +91,13 @@ exp = int(input("Enter the number of powers of 2 to display: "))
 gen_pow = display_powers_of_2(exp)
 for i,power in enumerate(gen_pow):
   print(power)
+
+# Que 11: Write a lamba function to calculate sum of two numbers.
+
+
+x = int(input("Enter num1: "))
+y = int(input("Enter num2: "))
+
+_SUM =  lambda x,y: x+y
+_result = _SUM(x,y)
+print("The sum of the two numbers is:",_result)

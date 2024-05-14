@@ -149,3 +149,18 @@ def _check_of_even_num(_list):
 _check_of_even_num(
    _list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 )
+
+# Que 17: Write a code that calculates the product of positive numbers from a given list.
+from functools import reduce
+_list_pos =[]
+
+def _check_of_pos_num(_list):
+  for i in _list:
+    if i>0:
+      _list_pos.append(i)
+  print("The product of positive numbers from given list:",reduce((lambda x, y: x * y), _list_pos))
+
+    
+_check_of_pos_num(
+   _list = [-1,2,3,2,4,-7]
+)

@@ -313,3 +313,92 @@ The most common use of polymorphism in object-oriented programming occurs when a
 Method overriding is an ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. 
 When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.
 (child class is always poerful than parent class)
+
+# Que 31: Define a parent class Animal with a method make_sound that prints "Generic animal sound". 
+#         Create a child class Dog inheriting from Animal with a method make_sound that prints "Woof!".
+
+class Animal:
+  def make_sound(self):
+    print("Generic animal sound")
+
+class Dog(Animal):
+  def make_sound(self):
+    print("Woof!")
+
+animal = Animal()
+dog = Dog()
+
+animal.make_sound()
+dog.make_sound()
+
+# Que 32: Define a method move in Animal class that prints "Animal moves". 
+#         Override the move method in Dog class to print "Dog runs"
+
+class Animal:
+  def move(self):
+    print("Animal moves")
+
+class Dog(Animal):
+  def move(self):
+    print("Dog runs")
+
+dog = Dog()
+
+dog.move()
+
+# Que 33: Create the class Mammal with a method reproduce that prints "Giving birth to live young".Create a class DogMammal inherting from 
+#         both Dog and Mammal.
+
+class Mammal:
+  def reproduce(self):
+    print("Giving birth to live young")
+
+class Dog:
+  def move(self):
+    print("Dog runs")
+
+class DogMammal(Mammal,Dog):
+  def make_sound(self):
+    print("Woof!")
+
+dogmammal = DogMammal()
+dogmammal.reproduce()
+dogmammal.move()
+dogmammal.make_sound()
+
+# Que 34: Create the class GermanShepherd inheriting from Dog and override the make_sound method to print "Bark".
+
+class Dog:
+  def move(self):
+    print("Dog runs")
+  def make_sound(self):
+    print("Woof!")
+
+class GermanShepherd(Dog):
+  def make_sound(self):
+    print("Bark!")
+
+gs = GermanShepherd()
+gs.make_sound()
+gs.move()
+
+# Que 34: Define constructors in both Animal and Dog classes with different initialization parameters.
+
+class Animal:
+  def __init__(self,_type,weight,gender):
+    self.type_of_animal= _type
+    self.weight_of_animal = weight
+    self.gender_of_animal = gender
+    print(self.type_of_animal,self.weight_of_animal,self.gender_of_animal)
+
+class Dog:
+  def __init__(self,name,breed,color):
+    self.name_of_dog = name
+    self.breed_of_dog = breed
+    self.color_of_dog = color
+    print(self.name_of_dog,self.breed_of_dog,self.color_of_dog)
+
+animal1 = Animal('mammal','12','male')
+animal2 = Animal('wild','20','male')
+Dog1 = Dog('Bruno','beagle','brown')
+Dog2 = Dog('Spiky','germanshperd','black')

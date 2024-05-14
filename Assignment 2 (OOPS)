@@ -109,3 +109,10 @@ num = int(input("Enter num: "))
 _Square = lambda num: num*num
 _square_result = _Square(num)
 print("The square of a given number is:",_square_result)
+
+# Que 13: Write a lamba function to check whether given number is even or odd.
+
+num = int(input("Enter num: "))
+
+_check_even_odd = lambda num: print("The given number is even:",num) if num%2 == 0 else print("The given number is odd:",num)
+_check_even_odd_result = _check_even_odd(num)

@@ -203,3 +203,49 @@ def is_prime(x):
 
 prime_numbers = list(filter(is_prime, _list_prime))
 print(prime_numbers)
+
+# Que 21: Write a lamba function to calculate sum of two numbers.
+
+
+x = int(input("Enter num1: "))
+y = int(input("Enter num2: "))
+
+_SUM =  lambda x,y: x+y
+_result = _SUM(x,y)
+print("The sum of the two numbers is:",_result)
+
+# Que 22: Write a lamba function to calculate sqaure of given numbers.
+
+
+x = int(input("Enter num: "))
+
+_Square=  lambda x: x*x
+_result = _Square(x)
+print("The square of the given numbers is:",_result)
+
+# Que 23: Write a lamba function to check whether given number is even or odd.
+
+num = int(input("Enter num: "))
+
+_check_even_odd = lambda num: print("The given number is even:",num) if num%2 == 0 else print("The given number is odd:",num)
+_check_even_odd_result = _check_even_odd(num)
+
+# Que 24: Write a lamba function to concate two strings.
+
+_str1 = input("Enter string 1: ")
+_str2 = input("Enter string 2: ")
+
+_concate_str = lambda _str1,_str2: _str1 + _str2
+_concate_str_result = _concate_str(_str1,_str2)
+print("The concatenated string is:",_concate_str_result)
+
+# Que 25: Write a lamba function to find maximum of three given numbers.
+
+_num1 = int(input("Enter num 1: "))
+_num2 = int(input("Enter num 2: "))
+_num3 = int(input("Enter num 3: "))
+
+_Max_Num = lambda _num1,_num2,_num3: max(_num1,_num2,_num3)
+_result_max_num = _Max_Num(_num1,_num2,_num3)
+print("The maximum number is:",_result_max_num)
+

@@ -178,3 +178,17 @@ def _check_of_odd_num(_list):
 _check_of_odd_num(
    _list = [2,3,4,5,6,7,8,9,11]
 )
+
+# Que 19: Write a code that calculates the sum of cubes of number from a given list.
+from functools import reduce
+
+def _check_of_cube_num(_list):
+  _cubes_num = list(map(lambda x:x**3,_list))
+  print("The cube of numbers in a list:",_cubes_num)
+  _sum_num = reduce((lambda x,y: x+y),_cubes_num)
+  print("The sum of cubes from a list:",_sum_num)
+
+    
+_check_of_cube_num(
+   _list = [1,2,3,4,5]
+)

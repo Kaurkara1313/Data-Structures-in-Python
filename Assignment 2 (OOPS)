@@ -192,3 +192,14 @@ def _check_of_cube_num(_list):
 _check_of_cube_num(
    _list = [1,2,3,4,5]
 )
+
+# Que 20: Write a code that filters out prime numbers from a given list.
+_list_prime = [2,3,6,5,8,9,7]
+def is_prime(x):
+  for i in range(2,x):
+    if x%i ==0:
+      return False
+  return True
+
+prime_numbers = list(filter(is_prime, _list_prime))
+print(prime_numbers)

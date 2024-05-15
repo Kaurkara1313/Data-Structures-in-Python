@@ -483,4 +483,192 @@ Regular Method:
 Regular (instance) methods need a class instance and can access the instance through self . 
 They can read and modify an objects state freely. Class methods, marked with the @classmethod decorator, don't need a class instance. They can't access the instance (self) but they have access to the class itself
 
-# Que 39: 
+# Que 39: How can you achieve abstraction using interfaces in python?
+
+Abstraction in Python is achieved using abstract classes or interfaces provided by the "abc" module. Abstract classes define a common interface for their subclasses, while interfaces define a set of methods that must be implemented by classes that implement the interface. The use of abstract classes and interfaces allows you to create a high-level contract that all classes must adhere to.
+
+# Que 40: Can you provide an example of how abstraction can be utlilized to creat common interface in python ?
+from abc import ABC, abstractmethod
+# Define an abstract base class 'Shape'
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+# Define a class 'Circle' that inherits from 'Shape'
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius
+    
+    def perimeter(self):
+      return 2 * 3.14 * self.radius
+
+# Define a class 'Rectangle' that inherits from 'Shape'
+class Rectangle(Shape):
+    def __init__(self, width, length):
+        self.width = width
+        self.length = length
+
+    def area(self):
+        return self.width * self.length
+    
+    def perimeter(self):
+        return 2 * (self.width + self.length)
+
+# Create instances of 'Circle' and 'Rectangle'
+circle = Circle(4)
+rectangle = Rectangle(4,6)
+
+print("The area of circle:",circle.area(),"\nThe perimeter of circle:",circle.perimeter()) 
+print("The area of rectangle:",rectangle.area(),"\nThe perimeter of rectangle:",rectangle.perimeter())  
+
+# Que 41: How does python achieve polymorphism through method overriding ?
+
+Polymorphism is most commonly associated with inheritance. In Python, child classes, like other programming languages, inherit methods and attributes from the parent class. Method Overriding is the process of redefining certain methods and attributes to fit the child class. This is especially handy when the method inherited from the parent class does not exactly fit the child class. In such circumstances, the method is re-implemented in the child class. Method Overriding refers to the technique of re-implementing a method in a child class.
+
+
+class Vehicle:
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.model = model
+        self.price = price
+
+    def show(self):
+        print('Details:', self.brand, self.model, 'Price:', self.price)
+
+    def max_speed(self):
+        print('Vehicle max speed is 160')
+
+    def gear_system(self):
+        print('Vehicle has 6 shifter gearbox')
+
+# inherit from vehicle class
+class Car(Vehicle):
+    def max_speed(self):
+        print('Car max speed is 260')
+
+    def gear_system(self):
+        print('Car has Automatic Transmission')
+
+# Car Object
+car = Car('Audi', 'R8', 9000000)
+car.show()
+
+# call methods from Car class
+car.max_speed()
+car.gear_system()
+
+# Vehicle Object
+vehicle = Vehicle('Nissan', 'Magnite', 550000)
+vehicle.show()
+
+# call method from a Vehicle class
+vehicle.max_speed()
+vehicle.gear_system()
+
+In Python interpreter detects that the car object’s max_speed() and gear_system() methods are overridden due to polymorphism. As a result, it employs the one defined in the child class (Car).
+The show() function, on the other hand, has not been modified, i.e. it is not overridden in the Car class, hence it is utilized from the Vehicle class.
+
+# Que 42: Define a base class with a method and a subclass that overrides the method.
+
+class Vehicle:
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.model = model
+        self.price = price
+
+    def show(self):
+        print('Details:', self.brand, self.model, 'Price:', self.price)
+
+    def max_speed(self):
+        print('Vehicle max speed is 160')
+
+    def gear_system(self):
+        print('Vehicle has 6 shifter gearbox')
+
+# inherit from vehicle class
+class Car(Vehicle):
+    def max_speed(self):
+        print('Car max speed is 260')
+
+    def gear_system(self):
+        print('Car has Automatic Transmission')
+
+# Car Object
+car = Car('Audi', 'R8', 9000000)
+car.show()
+
+# call methods from Car class
+car.max_speed()
+car.gear_system()
+
+# Vehicle Object
+vehicle = Vehicle('Nissan', 'Magnite', 550000)
+vehicle.show()
+
+# call method from a Vehicle class
+vehicle.max_speed()
+vehicle.gear_system()
+
+In Python interpreter detects that the car object’s max_speed() and gear_system() methods are overridden due to polymorphism. As a result, it employs the one defined in the child class (Car).
+The show() function, on the other hand, has not been modified, i.e. it is not overridden in the Car class, hence it is utilized from the Vehicle class.
+
+# Que 43: Define a base class and multiple subclasses with overridden methods.
+class Dog:
+  def move(self):
+    print("Dog runs")
+  def make_sound(self):
+    print("Woof!")
+
+class GermanShepherd(Dog):
+  def make_sound(self):
+    print("Bark!")
+
+class BullDog(Dog):
+  def make_sound(self):
+    print("Snorting!")
+
+class Beagle(Dog):
+  def make_sound(self):
+    print("Bay!")
+
+class Chihuahua(Dog):
+  def make_sound(self):
+    print("Whining!")
+
+#GermanShepherd
+gs = GermanShepherd()
+print("The sound of GermanShepherd:")
+gs.make_sound()
+print("The move of GermanShepherd:")
+gs.move()
+
+#BullDog
+bd = BullDog()
+print("The sound of BullDog:")
+bd.make_sound()
+print("The move of BullDog:")
+bd.move()
+
+#Beagle
+b = Beagle()
+print("The sound of Beagle:")
+b.make_sound()
+print("The move of Beagle:")
+b.move()
+
+#Chihuahua
+ch = Chihuahua()
+print("The sound of Chihuahua:")
+ch.make_sound()
+print("The move of Chihuahua:")
+ch.move()
+
+# Que 44:
